@@ -11,5 +11,7 @@ Enter
 1. PUT
 2. DELETE 
 3. UPDATE
-Enter value to Put: 2
-Key inserted
+
+In another terminal run the client simultaneously and the stream can be seen.
+
+neha@neha: python client.py
