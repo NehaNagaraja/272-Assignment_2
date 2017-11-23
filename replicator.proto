@@ -1,0 +1,16 @@
+syntax = "proto3";
+package replicator;
+
+message Request {
+    string data = 1;
+}
+
+message Response {
+    string operation = 1;
+    string key = 2;
+    string value = 3;
+}
+
+service Replicator {
+   rpc GetInstance(Request) returns (stream Response);
+}

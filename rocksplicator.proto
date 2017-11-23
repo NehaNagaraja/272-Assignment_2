@@ -1,0 +1,16 @@
+syntax = "proto3";
+package rocksplicator;
+
+message Request{
+	uint32 uid = 1;
+}
+
+message Response{
+	repeated uint32 uid = 1;
+}
+
+message Empty {};
+
+service Rocksplicator{
+	rpc GetNum(Empty) returns (stream Response);
+}
