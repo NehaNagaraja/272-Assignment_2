@@ -21,7 +21,7 @@ class ReplicatorClient():
         self.stub = replicator_pb2.ReplicatorStub(self.channel)
 
    def GetInstance(self,request):
-       return self.stub.GetInstance(replicator_pb2.Request(request=request))
+       return self.stub.GetInstance(replicator_pb2.Request(data=request))
 
 def put():
     value = input("Enter value to Put: ")
